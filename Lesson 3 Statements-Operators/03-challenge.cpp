@@ -3,26 +3,24 @@
 using namespace std;
 
 int main() {
-  // 1 dollar 100 cents
-  // 1 quarter 25 cents
-  // 1 dime 10 cents
-  // 1 nickel 5 cents
-  // 1 penny 1 cent
+  // Dollar = 100 cents
+  // Quarter = 25 cents
+  // Dime = 10 cents
+  // Nickel = 5 cents
+  // Penny = 1 cents
 
   const int dollar_value = 100;
   const int quarter_value = 25;
   const int dime_value = 10;
   const int nickel_value = 5;
 
-  int change_amount;
+  int balance, dollars, quarters, dimes, nickels, pennies, cents;
 
-  cout << "Enter an amount in cents: ";
-  cin >> change_amount;
+  cout << "Enter the amount of money in cents: ";
+  cin >> cents;
 
-  int balance, dollars, quarters, dimes, nickels, pennies;
-
-  dollars = change_amount / dollar_value;
-  balance = change_amount - (dollars * dollar_value);
+  dollars = cents / dollar_value;
+  balance = cents - (dollars * dollar_value);
 
   quarters = balance / quarter_value;
   balance -= quarters * quarter_value;
@@ -35,11 +33,11 @@ int main() {
 
   pennies = balance;
 
-  cout << "dollars: " << dollars << endl;
-  cout << "quarters: " << quarters << endl;
-  cout << "dimes: " << dimes << endl;
-  cout << "nickels: " << nickels << endl;
-  cout << "pennies: " << pennies << endl;
+  cout << "Dollars: " << dollars << endl;
+  cout << "Quarters: " << quarters << endl;
+  cout << "Dimes: " << dimes << endl;
+  cout << "Nickels: " << nickels << endl;
+  cout << "Pennies: " << pennies << endl;
 
   return 0;
 }
