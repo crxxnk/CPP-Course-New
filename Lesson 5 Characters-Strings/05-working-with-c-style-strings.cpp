@@ -21,7 +21,7 @@ int main() {
 
   //! Instead of returning an int, the strlen function returns a size_t value which is an unsigned value we don't know(unsigned long, unsigned long long)
   cout << "Hello " << first_name << " your first name has " << strlen(first_name) << " characters" << endl;
-  cout << "and your last name " << last_name << " has " strlen(last_name) << " characters" << endl;
+  cout << "and your last name " << last_name << " has " << strlen(last_name) << " characters" << endl;
 
   strcpy(full_name, first_name); // Copies the first_name to the full_name variable
   strcat(full_name, " "); // Adds a space to the full_name variable
