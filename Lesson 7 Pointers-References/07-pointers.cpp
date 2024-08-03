@@ -219,5 +219,116 @@ int main() {
   cout << *(scores_ptr + 1) << endl; // 95
   cout << *(scores_ptr + 2) << endl; // 89
 
+  /*
+  ? Pointer Arithmetic
+  ? Pointers can be used in
+    * Assignment expressions
+    * Arithmetic expressions
+    * Comparison expressions
+  ? C++ allows pointer arithmetic
+  ? Pointer arithmetic only makes sense with raw arrays
+  * (++) increments a pointer to point to the next array element
+  int_ptr++;
+  * (--) decrements a pointer to point to the previous array element
+  int_ptr--;
+  * (+) increments pointer by n * sizeof(type)
+  int_ptr += n; or int_ptr = int_ptr + n;
+  * (-) decrements pointer by n * sizeof(type)
+  int_ptr -= n; or int_ptr = int_ptr - n;
+  ? Subtracting two pointers
+  * Determine the number of elements between the pointers
+  * Both pointers must point to the same data type
+  int n = int_ptr2 - int_ptr1;
+  ? Comparing two pointers == and !=
+  ? Determine if two pointers point to the same location
+  ! does NOT compare the data where they point!
+  string s1 = "Alex";
+  string s2 = "Alex";
+
+  string *p1 = &s1;
+  string *p2 = &s2;
+  string *p3 = &s1;
+
+  p1 == p2; // false
+  p1 == p3; // true
+  p2 != p1; // true
+
+  ? Comparing the data pointers point to
+  ? Determine if two pointers point to the same data
+  ! you must compare the referenced pointers
+  string s1 = "Alex";
+  string s2 = "Alex";
+
+  string *p1 = &s1;
+  string *p2 = &s2;
+  string *p3 = &s1;
+
+  / *p1 == *p2; // true
+  / *p1 == *p3; // true
+  / *p2 != *p1; // false
+  */
+
+  //* Examples
+
+  int randNums[] {10, 70, 32, 69, 4, -1};
+  int *rand_nums = randNums;
+  /*
+  while (*rand_nums != -1) {  Loops between the array and stops when it reaches -1
+    cout << *rand_nums << " ";
+    rand_nums++;
+  }
+
+  or
+  */
+  while(*rand_nums != -1)
+    cout << *rand_nums++ << endl;
+
+  char jusName[] {"Alex"};
+  char *char_ptr1 = nullptr;
+  char *char_ptr2 = nullptr;
+
+  char_ptr1 = &jusName[0];
+  char_ptr2 = &jusName[3];
+
+  cout << "In the string " << jusName << ", " << *char_ptr1 << " is " << (char_ptr2 - char_ptr1) << " characters away from " << *char_ptr2 << endl;
+
+  /*
+  ? Passing pointers to a function
+  ? Const and Pointers
+  * There are several ways to qualify pointers using const
+    * Pointers to constants
+    * Constant pointers
+    * Constant pointers to constants
+  ? Pointers to constants
+  ! The data pointed to by the pointers is constant and CANNOT be changed
+  ? The pointer itself can change and point somewhere else
+  int high_score {100};
+  int low_score {65};
+  const int *score_ptr = &high_score;
+
+  / *score_ptr = 86; //! ERROR
+  score_ptr = &low_score; // OK
+
+  ? Constant pointers
+  ? The data pointed to by the pointers can be changed
+  ! The pointer itself CANNOT change and point somewhere else
+  int high_score {100};
+  int low_score {65};
+  int *const score_ptr = &high_score;
+
+  / *score_ptr = 86; // OK
+  score_ptr = &low_score; //! ERROR
+
+  ? Constant pointers to constants
+  ! The data pointed to by the pointers is constant and CANNOT be changed
+  ! The pointer itself CANNOT change and point somewhere else
+  int high_score {100};
+  int low_score {65};
+  const int *const score_ptr = &high_score;
+
+  / *score_ptr = 86; //! ERROR
+  score_ptr = &low_score; //! ERROR
+  */
+
   return 0;
 }
