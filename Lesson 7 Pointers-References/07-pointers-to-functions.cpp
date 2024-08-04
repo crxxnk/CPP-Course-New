@@ -13,6 +13,13 @@ void swap(int* a, int* b) {
   *b = temp;
 }
 
+//int *dont_do_this();
+//int *or_this();
+
+int *largest_int(int *int_ptr1, int *int_ptr2);
+
+int *create_array(size_t size, int init_value = 0);
+
 void display(const vector<string> *const v) {
   //(*v).at(0) = "Alex"; //! ERROR it is a const
   for (auto str: *v)
@@ -71,6 +78,63 @@ int main() {
 
   int scores[] {100, 98, 97, 79, 85, -1};
   display_ar(scores, -1);
+
+  /*
+  ? Returning a pointer from a function
+  * Functions can also return pointers
+  type *function();
+  ? Should return pointers to:
+    * Memory dynamically allocated in the function
+    * To data that was passed in
+  ! Never return a pointer to a local function variable!
+  */
+  int num1 = 15;
+  int num2 = 20;
+  int *num1_ptr = &num1;
+  int *num2_ptr = &num2;
+
+  cout << *largest_int(num1_ptr, num2_ptr) << endl;
+  //or
+  cout << *largest_int(&num1, &num2) << endl;
+
+  int *my_array;
+  my_array = create_array(100, 20);
+  for (int i = 0; i < 100; i++)
+    cout << my_array[i] << endl;
+  delete[] my_array;
   
   return 0;
 }
+
+//* Example of returning a pointer from a function
+
+int *largest_int(int *int_ptr1, int *int_ptr2) {
+  if (*int_ptr1 > *int_ptr2)
+    return int_ptr1;
+  else
+    return int_ptr2;
+}
+
+//* Example of returning dynamically allocated memory
+
+int *create_array(size_t size, int init_value) {
+  int *new_storage {nullptr};
+  new_storage = new int[size];
+  for (size_t i = 0; i < size; i++)
+    *(new_storage + i) = init_value; // initializes all array elements to init_value
+  return new_storage;
+}
+
+//! NEVER RETURN A POINTER TO A LOCAL VARIABLE
+/*
+int *dont_do_this() {
+  int size{};
+  return &size;
+}
+
+int *or_this() {
+  int size{};
+  int *int_ptr = &size;
+  return int_ptr;
+}
+*/
