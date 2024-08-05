@@ -16,6 +16,9 @@ void swap(int* a, int* b) {
 //int *dont_do_this();
 //int *or_this();
 
+//TODO TEST I WILL DELETE
+int *larg_int(int* num1, int* num2);
+
 int *largest_int(int *int_ptr1, int *int_ptr2);
 
 int *create_array(size_t size, int init_value = 0);
@@ -102,6 +105,9 @@ int main() {
   for (int i = 0; i < 100; i++)
     cout << my_array[i] << endl;
   delete[] my_array;
+
+  //TODO TEST I WILL DELETE
+  cout << *larg_int(&num1, &num2) << endl;
   
   return 0;
 }
@@ -138,3 +144,12 @@ int *or_this() {
   return int_ptr;
 }
 */
+
+
+//TODO TEST I WILL DELETE
+int *larg_int(int* num1, int* num2) {
+  if (*num1 > *num2)
+    return num1;
+  else 
+    return num2;
+}
