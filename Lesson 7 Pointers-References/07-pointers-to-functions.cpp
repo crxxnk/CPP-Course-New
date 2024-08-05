@@ -137,8 +137,12 @@ int *or_this() {
   int *int_ptr = &size;
   return int_ptr;
 }
+<<<<<<< HEAD
 */
 
 void balls(int cock) {
   int baoulz = cock + 1;
 }
+=======
+*/
+>>>>>>> 7ec48eb (e)
