@@ -16,7 +16,7 @@ class Students {
 };
 
 int main() {
-  Students student1(15, "Alex", 4.7);
+  Students student1(15, "Alex", 3.7);
   cout << student1.gpa << endl;
 
   return 0;
