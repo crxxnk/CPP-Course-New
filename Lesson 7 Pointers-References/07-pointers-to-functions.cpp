@@ -138,3 +138,7 @@ int *or_this() {
   return int_ptr;
 }
 */
+
+void balls(int cock) {
+  int baoulz = cock + 1;
+}
