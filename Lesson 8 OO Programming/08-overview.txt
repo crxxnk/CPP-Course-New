@@ -1,0 +1,16 @@
+Object-Oriented Programming - Classes and Objects
+* What is Object-Oriented Programming?
+* What are Classes and Objects?
+* Declaring Classes and creating Objects
+* Dot and pointer operators
+* public and private access modifiers
+* Methods, Constructors and Destructors
+  * class methods
+  * default and overloaded constructors
+  * copy and move constructors
+  * shallow vs deep copying
+  * this pointer
+
+* static class members
+* struct vs class
+* friend of a class
