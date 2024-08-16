@@ -66,7 +66,37 @@ delete enemy; //! destructor called
 
 Player alex;
 Player *enemy = new Player;
+
+! Overloading Constructors
+? Classes can have as many constructors as necessary
+? Each must have a unique signature
+? Default constructor is no longer compiled-generated once another constructor is declared
 */
+
+class Account
+{
+private:
+  std::string name;
+  double balance;
+public:
+  Account();
+  Account(std::string _name);
+  Account(std::string _name, double _balance);
+};
+
+Account::Account() {
+  name = "None";
+  balance = 0;
+}
+
+Account::Account(std::string _name) {
+  name = _name;
+}
+
+Account::Account(std::string _name, double _balance) {
+  name = _name;
+  balance = _balance;
+}
 
 //* Examples:
 
@@ -99,7 +129,7 @@ int main() {
   {
   Player slayer;
   slayer.setName("Slayer");
-  } // destructor called when out of scope
+  } // destructor called when out of scope  
 
   {
   Player alex;
