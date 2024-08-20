@@ -66,39 +66,9 @@ delete enemy; //! destructor called
 
 Player alex;
 Player *enemy = new Player;
-
-! Overloading Constructors
-? Classes can have as many constructors as necessary
-? Each must have a unique signature
-? Default constructor is no longer compiled-generated once another constructor is declared
 */
 
-class Account
-{
-private:
-  std::string name;
-  double balance;
-public:
-  Account();
-  Account(std::string _name);
-  Account(std::string _name, double _balance);
-};
-
-Account::Account() {
-  name = "None";
-  balance = 0;
-}
-
-Account::Account(std::string _name) {
-  name = _name;
-}
-
-Account::Account(std::string _name, double _balance) {
-  name = _name;
-  balance = _balance;
-}
-
-//* Examples:
+//* Example:
 
 class Player
 {
@@ -125,6 +95,133 @@ public:
   }
 };
 
+/*
+! Overloading Constructors
+? Classes can have as many constructors as necessary
+? Each must have a unique signature
+? Default constructor is no longer compiled-generated once another constructor is declared
+*/
+
+//* Example:
+class Account
+{
+private:
+  std::string name;
+  double balance;
+public:
+  Account();
+  Account(std::string _name);
+  Account(std::string _name, double _balance);
+};
+
+Account::Account() {
+  name = "None";
+  balance = 0;
+}
+
+Account::Account(std::string _name) {
+  name = _name;
+}
+
+Account::Account(std::string _name, double _balance) {
+  name = _name;
+  balance = _balance;
+}
+
+/*
+! Constructor Initialization Lists
+? So far, all data member values have been set in the constructor body
+
+? Constructor initialization lists
+  * are more efficient
+  * initialization list immediately follows the parameter list
+  * initializes the data members as the object is created!
+  * order of initialization is the order of declaration in the class
+*/
+
+//* Example:
+
+class Dog
+{
+private:
+  int age;
+  std::string name;
+public:
+  Dog();
+  Dog(std::string name, int age);
+  ~Dog();
+};
+
+// Initializes name to None and age to 0 (they are initialized before the body is executed)
+Dog::Dog(): name {"None"}, age{0} {
+  
+}
+// When an object is created, it initializes the function parameters to the class members, useful for name conflict
+Dog::Dog(std::string name, int age): name{name}, age{age} {
+  std::cout << "A dog was just born!" << std::endl;
+}
+
+Dog::~Dog() {
+  std::cout << "A dog just died!" << std::endl;
+}
+
+/*
+! Delegating Constructors
+? Often the code for constructors is very similar
+? Duplicated code can lead to errors
+? C++ allows delegating constructors
+  * code for one constructor can call another in the initialization list
+  * avoids duplicating code
+*/
+
+//* Example:
+
+class Animal
+{
+private:
+  std::string name;
+  int age;
+  float weight;
+public:
+  Animal();
+  Animal(std::string name);
+  Animal(std::string name, int age, float weight);
+};
+
+/* Before:
+Animal::Animal(): name{"None"}, age{0}, weight{0.0f} {
+
+}
+
+Animal::Animal(std::string name): name{name}, age{0}, weight{0.0f} {
+
+}
+
+Animal::Animal(std::string name, int age, float weight): name{name}, age{age}, weight{weight} {
+
+}
+*/
+
+//! We don't need to duplicate the initialization list, instead we do this:
+
+Animal::Animal(std::string name, int age, float weight): name{name}, age{age}, weight{weight} {
+
+}
+
+Animal::Animal(): Animal {"None", 0, 0.0f} {
+
+}
+
+Animal::Animal(std::string name): Animal{name, 0, 0.0f} {
+
+}
+
+/*
+! Default Construct Parameters
+? Can often simplify our code and reduce the number of overloaded constructors
+? Same rules apply as we learned with non-member functions
+*/
+
 int main() {
   {
   Player slayer;
@@ -148,6 +245,13 @@ int main() {
 
   delete enemy;
   delete levelBoss;
+
+  Dog Rush("Rush", 1);
+  Dog* Lilly = new Dog("Lilly", 15);
+  delete Lilly;
+
+  Animal* bird = new Animal("Bird", 4, 0.7);
+  delete bird;
 
   return 0;
 }
