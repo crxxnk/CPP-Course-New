@@ -222,6 +222,23 @@ Animal::Animal(std::string name): Animal{name, 0, 0.0f} {
 ? Same rules apply as we learned with non-member functions
 */
 
+class Enemies
+{
+private:
+  std::string name;
+  int health;
+  int xp;
+public:
+  // Constructor with default parameter values
+  Enemies(std::string name = "None", int health = 0, int xp = 0);
+  void displayEnemy()
+  {
+    std::cout << name << ", " << health << ", " << xp << std::endl;
+  }
+};
+
+Enemies::Enemies(std::string name, int health, int xp): name(name), health(health), xp(xp){}
+
 int main() {
   {
   Player slayer;
@@ -252,6 +269,13 @@ int main() {
 
   Animal* bird = new Animal("Bird", 4, 0.7);
   delete bird;
+
+  Enemies empty; // "None", 0, 0
+  Enemies goblin {"Goblin"}; // "Goblin", 0, 0
+  Enemies gorlockTheDestroyer {"Gorlock", 60, 7000}; // "Gorlock", 60, 7000
+  Enemies batman {"Batman", 100}; // "Batman", 100, 0
+
+  gorlockTheDestroyer.displayEnemy();
 
   return 0;
 }
