@@ -36,10 +36,18 @@ public:
   //? Declaring copy constructor
   Player(const Player &source);
   Player createSuperEnemy();
+  std::string getName() { return name; }
+  int getHealth() { return health; }
+  int getXp() { return xp; }
+  ~Player()
+  {
+    std::cout << "Player destructor called for " << name << std::endl;
+  }
 };
 
 Player::Player(const Player &source): name(source.name), health(source.health), xp(source.xp){
   // code or initialization list to copy the object
+  std::cout << "Copy constructor made for " << source.name << std::endl;
 }
 
 // Returning an object from a function
@@ -49,17 +57,20 @@ Player Player::createSuperEnemy()
   return superEnemy; // A copy of the element is returned
 }
 
-// void displayPlayer(Player p) { //! p is a copy of hero, destructor for p will be called
-//   std::cout << "Name: " << p.name << std::endl;
-//   std::cout << "Health: " << p.health << std::endl;
-//   std::cout << "Experience: " << p.xp << std::endl;
-// }
+void displayPlayer(Player p) { //! p is a copy of hero, destructor for p will be called
+  std::cout << "Name: " << p.getName() << std::endl;
+  std::cout << "Health: " << p.getHealth() << std::endl;
+  std::cout << "Experience: " << p.getXp() << std::endl;
+}
 
 int main()
 {
   Player hero{"Hero", 100, 20};
   Player anotherHero{hero}; // Makes a copy of hero
   Player enemy;
+
+  displayPlayer(enemy);
+
   enemy = enemy.createSuperEnemy();
 
   return 0;
