@@ -1,6 +1,8 @@
 #include <iostream>
 
 /*
+! EXAMPLES ARE IN Account FOLDER !
+
 ! Inheritance
 ? What is it and why is it used?
 * Provides a method for creating new classes from existing classes
@@ -70,33 +72,89 @@ class TrustAccount : public Account {
   * Creating new classes from existing classes proving more specialized attributes or operations
 ? Inheritance or Class Hierarchies
   * Organization of our inheritance relationships
-*/
 
-class Account
+! Public Inheritance vs. Composition
+
+* Both allow reuse of existing classes
+
+? Public Inheritance
+  * "is-a" relationship
+    * Employee 'is-a' Person
+    * Checking Account 'is-a' Account
+    * Cirlce 'is-a' Shape
+
+? Composition
+  * "has-a" relationship
+    * Person "has-a" Account
+    * Player "has-a" Special Attack
+    * Circle "has-a" Location
+
+* Composition example:
+
+struct Account
 {
-private:
-  std::string name;
-  int accountNumber;
-  double balance;
-public:
-  Account(std::string name, int accountNumber, double balance) : name(name), accountNumber(accountNumber), balance(balance) {}
-  void deposit(double amount) { balance += amount; }
-  void withdraw();
+int accountNum;
+double balance;
 };
 
-void Account::withdraw() {
-  double amount;
-  do{
-    std::cin >> amount;
-  }while(amount > this->balance || !isdigit(amount));
-  std::cout << "Withdrawal completed successfully" << std::endl;
-  balance -= amount;
-}
-
-int main()
+class Person
 {
-  Account account("John Doe", 123456789, 1000.0);
-  account.withdraw();
+private:
+  std::string name; // has-a name
+  Account account; // has-a account
+public:
+  double getBalance() const { return account.balance; }
+  Person() { account.balance = 0; }
+};
 
-  return 0;
-}
+! Deriving classes from existing classes
+
+class Base {
+  Base class members...
+};
+
+class Derived : access-specifier Base {
+  Derived class members...
+};
+
+! Access Specifier can be: public, private or protected. Private is default.
+
+? public:
+  * Most common
+  * Establishes 'is-a' relationship between Derived and Base classes
+
+? private and protected:
+  * Establishes "derived class has a base class" relationship
+  * "Is implemented in terms of" relationship
+  * Different from compositio
+
+* Example:
+class Account
+{
+  Account class members...
+};
+
+class SavingsAccount : public Account { //! SavingsAccount 'is-a' Account
+  SavingsAccount class members...
+};
+
+* Object creation examples:
+
+Account account;
+Account pAccount = new Account();
+
+account.deposit(1000.00);
+pAccount->withdraw(200.00);
+
+delete pAccount;
+
+SavingsAccount savAccount;
+SavingsAccount pSavAccount = new SavingsAccount();
+
+savAccount.deposit(1000.00);
+pSavAccount.withdraw(200.00);
+
+delete pSavAccount;
+
+! EXAMPLES ARE IN Account FOLDER !
+*/
