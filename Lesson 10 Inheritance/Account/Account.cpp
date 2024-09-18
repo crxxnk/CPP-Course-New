@@ -9,7 +9,7 @@ void Account::withdraw(const double amount) {
   std::cout << "Account withdraw called with " << amount << std::endl;
 }
 
-Account::Account(){
+Account::Account(): balance(0.0), name("An Account") {
 
 }
 

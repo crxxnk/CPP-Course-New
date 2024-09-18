@@ -2,8 +2,9 @@
 
 class Account
 {
-  double amount;
 public:
+  double balance;
+  std::string name;
   void deposit(const double amount);
   void withdraw(const double amount);
   Account();

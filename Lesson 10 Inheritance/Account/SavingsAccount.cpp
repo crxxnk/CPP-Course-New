@@ -9,7 +9,7 @@ void SavingsAccount::withdraw(const double amount) {
   std::cout << "Savings Account withdraw called with " << amount << std::endl;
 }
 
-SavingsAccount::SavingsAccount(){
+SavingsAccount::SavingsAccount(): intRate(3.0) {
 
 }
 

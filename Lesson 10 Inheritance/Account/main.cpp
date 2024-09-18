@@ -27,7 +27,7 @@ int main() {
   pSavAcc = new SavingsAccount();
   pSavAcc->deposit(3000.00);
   pSavAcc->withdraw(1000.00);
-  delete pAcc;
+  delete pSavAcc;
 
   return 0;
 }
