@@ -56,7 +56,7 @@ class Base
 {
 public:
   int a = 0;
-  void display() { std::cout << a << ", " << b << ","};
+  void display() { std::cout << a << ", "  << ",";}
 };
 
 int main()
