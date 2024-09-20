@@ -6,7 +6,7 @@
 
 class Base {
 protected:
-  // protected Base class members...
+  protected Base class members...
 };
 
 * Accessible from the Base class itself
@@ -27,9 +27,9 @@ private:
 
 class Inherited : protected Example
 {
-// protected: a
-// protected: b
-// c: no access
+protected: a
+protected: b
+c: no access
 };
 
 * Private Inheritance:
@@ -46,9 +46,9 @@ private:
 
 class Inherited : private Example
 {
-// private: a
-// private: b
-// c: no access
+private: a
+private: b
+c: no access
 };
 */
 
@@ -56,11 +56,27 @@ class Base
 {
 public:
   int a = 0;
-  void display() { std::cout << a << ", "  << ",";}
+  void display() { std::cout << a << ", "  << b << ", " << c << std::endl; }
+protected:
+  int b = 0;
+private:
+  int c = 0;
+};
+
+class Derived : public Base
+{
+
 };
 
 int main()
 {
+  std::cout << "=== Base member access from base objects ===============" << std::endl;
+  Base base;
+  base.a = 100; // OK
+  // base.b = 100; //! Compiler Error
+  // base.c = 100; //! Compiler Error
+
+  std::cout << "=== Base member access from derived objects ===============" << std::endl;
 
   return 0;
 }
