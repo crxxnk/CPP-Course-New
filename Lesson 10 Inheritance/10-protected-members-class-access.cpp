@@ -65,18 +65,31 @@ private:
 
 class Derived : public Base
 {
-
+  // a will be public
+  // b will be protected
+  // c will not be accessible
+public:
+  void accessBaseMembers(){
+    a = 100; // OK
+    b = 200; // OK
+    //c = 300; //! Compiler Error
+  }
 };
 
 int main()
 {
   std::cout << "=== Base member access from base objects ===============" << std::endl;
   Base base;
-  base.a = 100; // OK
+  base.a = 100;
   // base.b = 100; //! Compiler Error
   // base.c = 100; //! Compiler Error
 
   std::cout << "=== Base member access from derived objects ===============" << std::endl;
+
+  Derived d;
+  d.a = 100; // OK
+  // d.b = 400; //! Compiler Error
+  // d.c = 400; //! Compiler Error
 
   return 0;
 }
