@@ -126,7 +126,7 @@ class Derived : access-specifier Base {
 ? private and protected:
   * Establishes "derived class has a base class" relationship
   * "Is implemented in terms of" relationship
-  * Different from compositio
+  * Different from composition
 
 * Example:
 class Account

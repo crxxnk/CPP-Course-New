@@ -41,6 +41,7 @@ public:
   MyString();
   MyString(const char* s);
   MyString(const MyString &source);
+  MyString& operator=(const MyString &rhs);
   ~MyString();
   void display() const;
   int getLength() const;
@@ -84,6 +85,16 @@ const char* MyString::getStr() const {
   return str;
 }
 
+MyString& MyString::operator=(const MyString &rhs) { // rhs = right hand side
+  if(this == &rhs) // Checks for self assignment, for example p1 = p1;
+    return *this;
+  delete[] str; // Deallocates memory before copying
+  str = new char[std::strlen(rhs.str) + 1]; // Allocate storage for the deep copy
+  std::strcpy(str, rhs.str);
+
+  return *this;
+}
+
 int main()
 {
   std::string name = "Alex";
@@ -107,6 +118,26 @@ int main()
   empty.display();
   alex.display();
   guy.display();
+
+  //! Overloading the assignment operator(copy)
+
+  MyString s1 = "Balls";
+  MyString s2 = s1; // Initialization, NOT assignment
+
+  s2 = s1; // This calls the operator= method
+  s2.display();
+  s1.display();
+
+  /*
+  ! Move assignment operator(=)
+  ? You can choose to overload the move assignment operator
+    * C++ will use the copy asssignment operator if necessary
+  
+  MyString s3;
+  ! This object has no name, it's a temporary object
+  s3 = MyString {"Alex"}; // move assignment
+  * If we have raw pointer we should overload the move assignment operator for efficiency
+  */
 
   return 0;
 }
