@@ -53,7 +53,7 @@ public:
 
 class SavingsAccount : public Account
 {
-  friend std::ostream &operator<<(std::ostream &os, const SavingsAccount &account) { os << "Savings account balance: " << account.balance << "Interest rate: " << account.int_rate; return os;}
+  friend std::ostream &operator<<(std::ostream &os, const SavingsAccount &account) { os << "Savings account balance: " << account.balance << " Interest rate: " << account.int_rate; return os;}
 protected:
   double int_rate;
 public:
@@ -67,6 +67,8 @@ int main()
 {
   using namespace std;
 
+  cout << "======= Account Class =======\n" << endl;
+
   Account a1(1000.0);
   cout << a1 << endl;
 
@@ -78,6 +80,20 @@ int main()
 
   a1.withdraw(5000.0);
   cout << a1 << endl;
+
+  cout << "\n======= Savings Account Class =======\n" << endl;
+
+  SavingsAccount s1(1000, 5.0);
+  cout << s1 << endl;
+
+  s1.deposit(1000);
+  cout << s1 << endl;
+  
+  s1.withdraw(2000);
+  cout << s1 << endl;
+
+  s1.withdraw(1000);
+  cout << s1 << endl;
 
   return 0;
 }
