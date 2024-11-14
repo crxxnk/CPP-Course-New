@@ -32,28 +32,51 @@ class Account
 {
 public:
   virtual void withdraw(double amount) { std::cout << "In Account::withdraw" << std::endl; }
+  virtual ~Account() { std::cout << "Destructor for Account" << std::endl; }
 };
 
 class Savings : public Account
 {
 public:
   void withdraw(double amount) { std::cout << "In Savings::withdraw" << std::endl; }
+  ~Savings() { std::cout << "Destructor for Savings" << std::endl; }
 };
 
 class Checking : public Account
 {
 public:
   void withdraw(double amount) { std::cout << "In Checking::withdraw" << std::endl; }
+  ~Checking() { std::cout << "Destructor for Checking" << std::endl; }
 };
 
 class Trust : public Account
 {
 public:
   void withdraw(double amount) { std::cout << "In Trust::withdraw" << std::endl; }
+  ~Trust() { std::cout << "Destructor for Trust" << std::endl; }
 };
+
+/*
+! Virtual Destructors
+* Problems can occur when we destroy polymorphic objects
+! If a derived class is destroyed by deleting its storage via the base class pointer
+! and the class doesn't have a virtual destructor, then the behavior is undefined in the C++ standard
+* Derived objects must be destroyed in the correct order starting at the correct destructor
+? Solution/Rule:
+  * If a class has virtual functions
+  * ALWAYS provide a public virtual destructor
+  * If base class destructor is virtual then all derived class destructors are also virtual
+class Account {
+public:
+  virtual void withdraw(double amount);
+  virtual ~Account();
+  ...
+};
+*/
 
 int main()
 {
+  // Virtual functions section
   std::cout << "==== Pointers ====" << std::endl;
   Account* p1 = new Account;
   Account* p2 = new Savings;
@@ -79,6 +102,7 @@ int main()
   delete p2;
   delete p3;
   delete p4;
+  // Virtual functions section
 
   return 0;
 }
