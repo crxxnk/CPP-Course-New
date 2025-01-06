@@ -24,11 +24,11 @@ int main()
 
   for(int y = 0; y < height; y++) {
     for(int x = 0; x < width; x++) {
-      float factor = x / float(width);
+      float fWidth = static_cast<float>(width);
       float r = 0.0f, g = 0.0f, b = 0.0f;
 
-      r = x / float(width);
-      g = 1.0f - (x / float(width));
+      r = x / float(fWidth);
+      g = 1.0f - (x / fWidth);
 
       double renc = E(r);
       double genc = E(g);
