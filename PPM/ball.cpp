@@ -12,7 +12,7 @@ int main()
   const int rad = 50;
 
   std::ofstream file("ball.ppm");
-  
+
   file << "P3\n" << width << " " << height << " " << "\n255\n";
 
   for(int y = 0; y < height; y++) {
