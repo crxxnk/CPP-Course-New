@@ -35,7 +35,7 @@ float applyGlow(float baseColor, float x, float y, float width, float height, fl
 
 int main()
 {
-  const char* filePath = "C:/Users/PC/Downloads/gradient.ppm";
+  const char* filePath = "gradient.ppm";
   const int width = 500;
   const int height = 70;
   const float glowRadius = 150.0f;
