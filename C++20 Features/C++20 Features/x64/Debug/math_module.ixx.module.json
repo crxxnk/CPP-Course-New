@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "C++20 Features\\x64\\Debug\\math_module.ixx.obj",
+            "outputs": [
+                "C:\\Users\\PC\\Desktop\\Visual Studio\\C++\\C++ Course New\\CPP-Course-New\\C++20 Features\\C++20 Features\\x64\\Debug\\vc143.pdb",
+                "C++20 Features\\x64\\Debug\\",
+                "C:\\Users\\PC\\Desktop\\Visual Studio\\C++\\C++ Course New\\CPP-Course-New\\C++20 Features\\C++20 Features\\x64\\Debug\\math_module.ixx.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "math_module",
+                    "source-path": "c:\\users\\pc\\desktop\\visual studio\\c++\\c++ course new\\cpp-course-new\\c++20 features\\modules\\math_module.ixx",
+                    "is-interface": true
+                }
+            ],
+            "requires": [
+                {
+                    "logical-name": "iostream",
+                    "source-path": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\include\\iostream",
+                    "lookup-method": "include-angle",
+                    "unique-on-source-path": true
+                }
+            ]
+        }
+    ]
+}

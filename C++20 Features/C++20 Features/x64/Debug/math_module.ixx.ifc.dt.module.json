@@ -1,0 +1,11 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\users\\pc\\desktop\\visual studio\\c++\\c++ course new\\cpp-course-new\\c++20 features\\modules\\math_module.ixx",
+        "ProvidedModule": "math_module",
+        "ImportedModules": [],
+        "ImportedHeaderUnits": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\include\\iostream"
+        ]
+    }
+}

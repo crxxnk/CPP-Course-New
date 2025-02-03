@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\pc\\desktop\\visual studio\\c++\\c++ course new\\cpp-course-new\\c++20 features\\modules\\math_module.ixx",
+        "ProvidedModule": "math_module",
+        "Includes": [],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": [
+            {
+                "Header": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.40.33807\\include\\iostream",
+                "BMI": "C:\\Users\\PC\\Desktop\\Visual Studio\\C++\\C++ Course New\\CPP-Course-New\\C++20 Features\\C++20 Features\\x64\\Debug\\iostream_108L17NEQX0YR1QH.ifc"
+            }
+        ]
+    }
+}
