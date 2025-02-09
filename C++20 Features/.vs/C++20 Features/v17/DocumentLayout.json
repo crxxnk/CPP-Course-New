@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A6DD01D0-3D70-42FC-9618-5708F67760F5}|C\u002B\u002B20 Features.vcxproj|C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Modules\\math_module.ixx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A6DD01D0-3D70-42FC-9618-5708F67760F5}|C\u002B\u002B20 Features.vcxproj|solutionrelative:Modules\\math_module.ixx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A6DD01D0-3D70-42FC-9618-5708F67760F5}|C\u002B\u002B20 Features.vcxproj|C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Concepts\\concepts.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A6DD01D0-3D70-42FC-9618-5708F67760F5}|C\u002B\u002B20 Features.vcxproj|solutionrelative:Concepts\\concepts.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6DD01D0-3D70-42FC-9618-5708F67760F5}|C\u002B\u002B20 Features.vcxproj|C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Modules\\Impl_Hide\\player.ixx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A6DD01D0-3D70-42FC-9618-5708F67760F5}|C\u002B\u002B20 Features.vcxproj|solutionrelative:Modules\\Impl_Hide\\player.ixx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6DD01D0-3D70-42FC-9618-5708F67760F5}|C\u002B\u002B20 Features.vcxproj|C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Modules\\Impl_Hide\\player_impl.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A6DD01D0-3D70-42FC-9618-5708F67760F5}|C\u002B\u002B20 Features.vcxproj|C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Modules\\Impl_Hide\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A6DD01D0-3D70-42FC-9618-5708F67760F5}|C\u002B\u002B20 Features.vcxproj|solutionrelative:Modules\\Impl_Hide\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6DD01D0-3D70-42FC-9618-5708F67760F5}|C\u002B\u002B20 Features.vcxproj|C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Modules\\Impl_Hide\\player.ixx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A6DD01D0-3D70-42FC-9618-5708F67760F5}|C\u002B\u002B20 Features.vcxproj|solutionrelative:Modules\\Impl_Hide\\player.ixx||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,37 +30,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "math_module.ixx",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Modules\\math_module.ixx",
+              "RelativeDocumentMoniker": "Modules\\math_module.ixx",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Modules\\math_module.ixx",
+              "RelativeToolTip": "Modules\\math_module.ixx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
+              "WhenOpened": "2025-02-04T15:59:22.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Modules\\Impl_Hide\\main.cpp",
               "RelativeDocumentMoniker": "Modules\\Impl_Hide\\main.cpp",
               "ToolTip": "C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Modules\\Impl_Hide\\main.cpp",
               "RelativeToolTip": "Modules\\Impl_Hide\\main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-03T19:57:13.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T19:57:13.665Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "player_impl.cpp",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Modules\\Impl_Hide\\player_impl.cpp",
               "RelativeDocumentMoniker": "Modules\\Impl_Hide\\player_impl.cpp",
               "ToolTip": "C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Modules\\Impl_Hide\\player_impl.cpp",
               "RelativeToolTip": "Modules\\Impl_Hide\\player_impl.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-03T19:48:45.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T19:48:45.826Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "player.ixx",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Modules\\Impl_Hide\\player.ixx",
               "RelativeDocumentMoniker": "Modules\\Impl_Hide\\player.ixx",
@@ -64,21 +79,19 @@
               "RelativeToolTip": "Modules\\Impl_Hide\\player.ixx",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
-              "WhenOpened": "2025-02-03T19:43:06.853Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T19:43:06.853Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "concepts.cpp",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Concepts\\concepts.cpp",
               "RelativeDocumentMoniker": "Concepts\\concepts.cpp",
               "ToolTip": "C:\\Users\\PC\\Desktop\\Visual Studio\\C\u002B\u002B\\C\u002B\u002B Course New\\CPP-Course-New\\C\u002B\u002B20 Features\\Concepts\\concepts.cpp",
               "RelativeToolTip": "Concepts\\concepts.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAALAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAE8AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-03T14:51:04.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T14:51:04.884Z"
             }
           ]
         }

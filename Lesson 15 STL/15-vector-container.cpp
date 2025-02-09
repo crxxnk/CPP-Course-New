@@ -224,6 +224,93 @@ void test7() {
   display(vec2);
 }
 
+void test8() {
+  std::cout << "\nTest 8 ==============================\n" << std::endl;
+
+  std::vector<int> vec1 {1,21,3,40,12};
+
+  display(vec1);
+  std::sort(vec1.begin(), vec1.end());
+  display(vec1);
+}
+
+void test9() {
+  // std::back_inserter constructs a back-insert iterator that inserts new elements
+  // at the end of the container it applied to. It's a special ouput iterator
+  // It's awesome!!! and very efficient
+  // There is also a front_inserter we can use with deques and lists
+  // Copy one list to another using an iterator and back_inserter
+
+  std::cout << "\nTest 9 ==============================\n" << std::endl;
+
+  std::vector<int> vec1 {1,2,3,4,5};
+  std::vector<int> vec2 {10,20};
+
+  display(vec1);
+  display(vec2);
+  std::cout << std::endl;
+
+  std::copy(vec1.begin(), vec1.end(), std::back_inserter(vec2)); // Copies the entire vec1 to vec2
+  display(vec1);
+  display(vec2);
+  std::cout << std::endl;
+
+  // Copy_if the element is even
+  vec1 = {1,2,3,4,5};
+  vec2 = {10,20};
+
+  display(vec1);
+  display(vec2);
+  std::cout << std::endl;
+
+  std::copy_if(
+    vec1.begin(),
+    vec1.end(),
+    std::back_inserter(vec2),
+    [](int x) { return x % 2 == 0; }
+  ); // Vertical for fun
+  display(vec1);
+  display(vec2);
+}
+
+void test10() {
+  std::cout << "\nTest 10 ==============================\n" << std::endl;
+
+  std::vector<int> vec1 {1,2,3,4,5}; //! Throws garbage numbers if this vector is bigger than the other
+  std::vector<int> vec2 {10,20,30,40,50}; //! And doesn't do anything if this vector is bigger
+  std::vector<int> vec3;
+
+  // 1 * 10, 2 * 20, 3 * 30, 4 * 40, 5 * 50 and store the results in vec3
+  std::transform(
+    vec1.begin(),
+    vec1.end(),
+    vec2.begin(),
+    std::back_inserter(vec3),
+    [](int x, int y) { return x * y; }
+  );
+  display(vec3);
+}
+
+void test11() {
+  std::cout << "\nTest 11 ==============================\n" << std::endl;
+
+  std::vector<int> vec1 {1,2,3,4,5,6,7,8,9,10};
+  std::vector<int> vec2 {100,200,300,400};
+
+  display(vec1);
+  display(vec2);
+  std::cout << std::endl;
+
+  auto it = std::find(vec1.begin(), vec1.end(), 5);
+  if(it != vec1.end()) {
+    std::cout << "Inserting..." << std::endl;
+    vec1.insert(it, vec2.begin(), vec2.end());
+  }
+  else
+    std::cout << "Sorry, 5 not found" << std::endl;
+  display(vec1);
+}
+
 int main() {
   test1();
   test2();
@@ -232,6 +319,10 @@ int main() {
   test5();
   test6();
   test7();
+  test8();
+  test9();
+  test10();
+  test11();
 
   return 0;
 }
