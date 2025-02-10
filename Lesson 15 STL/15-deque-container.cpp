@@ -62,12 +62,77 @@ void test1() {
 }
 
 void test2() {
-  std::cout << "\nTest 1 ==============================\n" << std::endl;
+  std::cout << "\nTest 2 ==============================\n" << std::endl;
+  std::deque<int> d {0,0,0};
+  display(d);
+
+  d.push_front(100);
+  d.push_front(200);
+  display(d);
+
+  std::cout << "Front: " << d.front() << std::endl;
+  std::cout << "Back: " << d.back() << std::endl;
+  std::cout << "Size: " << d.size() << std::endl;
+
+  d.pop_back();
+  d.pop_front();
+  display(d);
+}
+
+void test3() {
+  std::cout << "\nTest 3 ==============================\n" << std::endl;
+
+  std::vector<int> vec {1,2,3,4,5,6,7,8,9,10};
+  std::deque<int> d;
+
+  for(const auto &elem : vec) {
+    if(elem % 2 == 0)
+      d.push_back(elem);
+    else
+      d.push_front(elem);
+  }
+  display(d);
+}
+
+void test4() {
+  std::cout << "\nTest 4 ==============================\n" << std::endl;
+  
+  std::vector<int> vec {1,2,3,4,5,6,7,8,9,10};
+  std::deque<int> d;
+
+  for(const auto &elem : vec)
+    d.push_front(elem);
+  display(d);
+
+  d.clear();
+
+  for(const auto &elem : vec)
+    d.push_back(elem);
+  display(d);
+}
+
+void test5() {
+  std::cout << "\nTest 5 ==============================\n" << std::endl;
+  
+  std::vector<int> vec {1,2,3,4,5,6,7,8,9,10};
+  std::deque<int> d;
+
+  std::copy(vec.begin(), vec.end(), std::front_inserter(d));
+  display(d);
+
+  d.clear();
+
+  std::copy(vec.begin(), vec.end(), std::back_inserter(d));
+  display(d);
 }
 
 int main()
 {
   test1();
+  test2();
+  test3();
+  test4();
+  test5();
 
   return 0;
 }
